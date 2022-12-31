@@ -1,0 +1,43 @@
+﻿@model List<Customer>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<label>
+    Burası detay sayfasıdır.
+</label>
+    <table class="table-details">
+
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>CompanyName</td>
+            <td>ContactName</td>
+            <td>ContactTitle</td>
+            <td>Address</td>
+            <td>City</td>
+            <td>Region</td>
+            <td>PostalCode</td>
+            <td>Country</td>
+            <td>Phone</td>
+            <td>Fax</td>
+        </tr>
+        </thead>
+        <hr />
+        <tbody>
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerId</td>
+                <td>@item.ContactName</td>
+                <td>@item.ContactName</td>           
+                    <td>@item.Address</td>
+                    <td>@item.City</td>
+                    <td>@item.Region</td>
+                    <td>@item.PostalCode</td>
+                    <td>@item.Country</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Fax</td>
+            </tr>
+        }
+        </tbody>
+    </table>

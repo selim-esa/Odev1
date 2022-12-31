@@ -1,0 +1,60 @@
+﻿@model Customer
+<form asp-controller="Customer" asp-action="AddCustomer" method="post">
+    <div class="mb-3">
+        <label class="form-label">Id</label>
+        <input type="text" asp-for="CustomerId" name="CustomerId" class="form-control" required  placeholder="Id veriniz">
+    </div>
+<div class="mb-3">
+    <label  class="form-label">Company Name</label>
+        <input type="text" asp-for="CompanyName" class="form-control" name="CompanyName" placeholder="Şirket ismi giriniz">
+</div>
+
+<div class="mb-3">
+    <label  class="form-label">ContactName</label>
+        <input type="text" asp-for="ContactName" class="form-control" name="ContactName" placeholder="Yetkili kişi giriniz">
+</div>
+
+<div class="mb-3">
+    <label  class="form-label">ContactTitle</label>
+        <input type="text" asp-for="ContactTitle" class="form-control" name="ContactTitle" placeholder="iletişim giriniz">
+</div>
+
+<div class="mb-3">
+    <label  class="form-label">Address</label>
+        <input type="text" asp-for="Address" class="form-control" name="Address" placeholder="adres giriniz">
+</div>
+<div class="mb-3">
+    <label  class="form-label">City</label>
+        <input type="text" asp-for="City" class="form-control" name="City" placeholder="şehir giriniz">
+</div>
+<div class="mb-3">
+    <label  class="form-label">region</label>
+        <input type="text" asp-for="Region" class="form-control" name="Region" placeholder="bölge giriniz">
+</div>
+<div class="mb-3">
+    <label  class="form-label">postalcode</label>
+        <input type="text" asp-for="PostalCode" class="form-control" name="PostalCode" placeholder="posta kodu giriniz">
+</div>
+<div class="mb-3">
+    <label  class="form-label">country</label>
+        <input type="text" asp-for="Country" class="form-control" name="Country" placeholder="ülke giriniz">
+</div>
+<div class="mb-3">
+    <label  class="form-label">phone</label>
+        <input type="text" asp-for="Phone" class="form-control" name="Phone" placeholder="telefon numarası giriniz">
+</div>
+<div class="mb-3">
+    <label  class="form-label">fax</label>
+        <input type="text" asp-for="Fax" class="form-control" name="Fax" placeholder="fax numarası giriniz">
+</div>
+    
+    <button type="submit" class="form-control btn btn-primary" asp-controller="Customer" asp-action="Save" method="post">müşteri ekle</button>
+    <hr />
+
+
+</form>
+
+
+
+
+

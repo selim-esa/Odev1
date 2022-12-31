@@ -1,0 +1,36 @@
+﻿@model List<Customer>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form action="/Customer/CustomerDetails" class="form" method="post">
+    <table class="table">
+  
+    <button type="submit" class="form-control btn btn-primary" asp-controller="Customer" asp-action="CustomerDetails" method="post">Detay sayfasına git</button>
+    <hr />   
+    <button type="submit" class="form-control btn btn-primary" asp-controller="Customer" asp-action="AddCustomer" method="post">müşteri ekleme sayfasına git</button>
+
+
+
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>isim</th>
+                <th>şehir</th>
+                <th>ülke</th>
+                <th>şirket ismi</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+       <tr>
+           <td>@item.CustomerId</td>
+           <td>@item.ContactName</td>
+           <td>@item.City</td>
+           <td>@item.Country</td>
+           <td>@item.CompanyName</td>
+       </tr> 
+         }
+    </tbody>
+    </table>
+    </form>
